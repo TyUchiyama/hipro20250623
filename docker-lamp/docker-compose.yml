@@ -1,0 +1,10 @@
+services:
+  php-apache:
+    build: ./php
+    volumes:
+     - ./htdocs:/var/www/html
+     - ./php/php.ini:/usr/local/etc/php/php.ini
+    restart: always
+    ports:
+     - 8080:80
+
